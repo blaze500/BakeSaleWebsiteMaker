@@ -1,0 +1,199 @@
+*{
+}
+
+body{
+  height: 200vh;
+  width: 100%;
+}
+.PageContent{
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 90%;
+}
+
+.Background{
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://live.staticflickr.com/65535/50387900761_691518017d_b.jpg");
+
+}
+
+.HeadderBox {
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  background-color: #fefefe;
+  width: 100%; 
+  height: 12vh; 
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.NavBar {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  background-color: #fefefe;
+  width: 100%; 
+  height: 6vh; 
+  border: 1px solid black;
+}
+
+
+.NavTab{
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #000;
+  text-decoration: none;
+  border: 1px solid white;
+}
+
+.NavTab:hover:not(.active) {
+  background-color: #555;
+}
+
+
+
+.SubTitle{
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  height: 9vh;
+  width: 96%;
+  background-color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+  border: 1px solid black;
+}
+
+
+.ForumType1{
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  height: 16vh;
+  width: 96%;
+  background-color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+  border: 1px solid black;
+}
+
+.InputFeild1{
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  height: 9vh;
+  width: 100%;
+}
+
+.HalfInput{
+  width: 47%;
+  height: 65%;
+}
+
+
+
+
+.ForumType2{
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  height: 24vh;
+  width: 96%;
+  background-color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+  border: 1px solid black;
+}
+
+.InputFeild2{
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  width: 100%;
+}
+
+.ThirdInput{
+  width: 30%;
+  height: 65%; 
+}
+
+.SubtitleAndButtons{
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  width: 100%; 
+}
+
+.Buttons{
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 17%; 
+}
+
+.AddSubtract{
+  width: 45%;
+  height: 45%;
+  font-size: max(.8vw, 4.5px);
+}
+
+.SubmitBox{
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  width: 96%;
+  background-color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+  border: 1px solid black;
+}
+
+.SubmitButton{
+  width: 80%;
+  height: 60%;
+}
+
