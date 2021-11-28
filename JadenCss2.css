@@ -6,6 +6,100 @@ body{
   width: 99%;
   background-image: url("https://live.staticflickr.com/65535/50387900761_691518017d_b.jpg");
 }
+.FoodPic{
+  width: 22%;
+  height: 32vh;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+
+.OrderItem{
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: Row;
+  height: 36vh;
+  width: 100%;
+  background-color: white;
+  border-bottom: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+}
+
+
+
+.FoodContent{
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  height: 36vh;
+  width: 74.5%;
+  background-color: white;
+ 
+}
+
+.FoodTitle{
+   justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+.FoodDescriptions{
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  height: 36vh;
+  width: 100%;
+  background-color: white;
+}
+
+
+.FoodDescriptionBox{
+   justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 33.3%;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: white;
+
+}
+
+.FoodDescriptionBox2{
+   justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 33.3%;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: white;
+
+}
+
+.FoodAmountInput{
+  width: 95%;
+  height: 25%;
+}
+
+
 .PageContent{
   justify-content: flex-start;
   align-items: center;
@@ -65,12 +159,12 @@ body{
   flex-wrap: nowrap;
   display: flex;
   flex-direction: row;
-  width: 33.3%;
+  width: 49.99%;
   height: 100%;
   color: white;
   background-color: #000;
   text-decoration: none;
-  border: 1px solid black;
+  border-right: 1.5px solid white;
 }
 
 .NavTab2{
@@ -79,18 +173,15 @@ body{
   flex-wrap: nowrap;
   display: flex;
   flex-direction: row;
-  width: 33.3%;
+  width: 49.99%;
   height: 100%;
   color: white;
   background-color: #000;
   text-decoration: none;
-  border-left: 3px solid white;
-  border-right: 3px solid white;
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
+  border-left: 1.5px solid white;
 }
 
-.NavTab:hover:not(.active), .NavTab2:hover:not(.active) {
+.NavTab:hover:not(.active), .NavTab2:hover:not(.active){
   background-color: #555;
 }
 
@@ -147,22 +238,6 @@ body{
 
 
 
-
-.FormType2{
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  display: flex;
-  flex-direction: column;
-  height: 28vh;
-  width: 96%;
-  background-color: white;
-  padding-left: 2%;
-  padding-right: 2%;
-  border-bottom: 3px solid black;
-  border-left: 3px solid black;
-  border-right: 3px solid black;
-}
 
 .InputFeild2{
   justify-content: space-between;
