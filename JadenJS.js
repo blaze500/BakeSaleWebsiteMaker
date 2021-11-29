@@ -35,9 +35,10 @@ function createWebsite(){
 function CreateFoodHTML(foodNumber, FoodName, FoodPicUrl, DescriptionText, AllergyText, PricePerItem){
     var pageHTML=`
 
-                  <div class='OrderItem' id='Food`+ foodNumber + `'>
+                  <div class='OrderItem' id='Food`+ foodNumber + `' role='complementary' aria-label='Food `+ foodNumber +` Information Form'>
                       
-                      <img src="`+ FoodPicUrl +`" class='FoodPic'>
+                      3
+                      <img src="`+ FoodPicUrl +`" class='FoodPic' aria-label='Picture of Food `+ foodNumber +`'>
 
                       <div class='FoodContent'>
 
@@ -66,8 +67,21 @@ function CreateFoodHTML(foodNumber, FoodName, FoodPicUrl, DescriptionText, Aller
                               <div class='FoodDescriptionBox2'>
 
                                   <p>Price Per Item: `+ PricePerItem +`$</p>
-                                  <input class='FoodAmountInput' type='url' placeholder='Number Of Items Wanted' id=''>
-
+                                  <form>
+                                  <select name="NumberDropDown" id="DropDown`+ foodNumber +`">
+                                  <option value="0">0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                  <option value="6">6</option>
+                                  <option value="7">7</option>
+                                  <option value="8">8</option>
+                                  <option value="9">9</option>
+                                  <option value="10">10</option>
+                                  </select>
+                                  </form>
                                   
                               </div>
 
@@ -112,11 +126,11 @@ function CreateOrderPage(foodAmount){
 
         <div class='Background'>
 
-            <div class='PageContent'>
+            <div class='HeadderBox' role='banner' aria-label='Page Title: Bake Sale Website' > <h1>Bake Sale Website</h1> </div>
+            
+            <div class='PageContent' role='main' aria-label='Bake Sale Website'>    
 
-                <div class='HeadderBox'> <h1>Bake Sale Site</h1> </div>
-
-                <nav class='NavBar'>
+                <nav class='NavBar' role='navigation' aria-label='Navagation Bar'>
                     <a class='NavTab' href=''>Make Website</a>
                     <a class='NavTab2' href=''>Creators</a>
                 </nav>
@@ -138,7 +152,7 @@ function CreateOrderPage(foodAmount){
 
 var restOfPage=`
 
-                <div class='FormType1'>
+                <div class='FormType1' role='complementary' aria-label='Contact Information'>
 
                         <h3>Contact Info</h3>
 
@@ -154,7 +168,7 @@ var restOfPage=`
                 </div>
 
 
-                <div class='SubmitBox'>
+                <div class='SubmitBox' role='complementary' aria-label='Submission Button'>
                     <button class='SubmitButton' id='SubmitButton'>Submit</button>
                 </div>
 
