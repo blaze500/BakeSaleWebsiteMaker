@@ -1,7 +1,7 @@
 @media only screen and (max-width: 480px) {
   body{
     height: auto;
-    width: 99%;
+    width: 99vh;
     background-image: url("https://live.staticflickr.com/65535/50387900761_691518017d_b.jpg");
   }
   .PageContent{
@@ -144,8 +144,6 @@
 
 
 
-
-
   .FormType2{
     justify-content: flex-start;
     align-items: flex-start;
@@ -194,14 +192,14 @@
     display: flex;
     flex-direction: row;
     height: 100%;
-    width: 50%; 
+    width: 45%; 
     display: none;
   }
 
   .AddSubtract{
     width: 45%;
     height: 45%;
-    font-size: .8vw;
+    font-size: 3vw;
   }
 
   .SubmitBox{
