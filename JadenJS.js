@@ -148,7 +148,7 @@ function CreateOrderPage(foodAmount){
   for(var i=0; i<allFood.length; i++){
     startOfPage= startOfPage + CreateFoodHTML(i+1, allFood[i][0], allFood[i][1], allFood[i][3], allFood[i][4], allFood[i][5]);
   }
-
+  
 
 var restOfPage=`
 
