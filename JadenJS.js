@@ -37,7 +37,7 @@ function CreateFoodHTML(foodNumber, FoodName, FoodPicUrl, DescriptionText, Aller
 
                   <div class='OrderItem' id='Food`+ foodNumber + `' role='complementary' aria-label='Food `+ foodNumber +` Information Form'>
                       
-                      3
+                      
                       <img src="`+ FoodPicUrl +`" class='FoodPic' aria-label='Picture of Food `+ foodNumber +`'>
 
                       <div class='FoodContent'>
