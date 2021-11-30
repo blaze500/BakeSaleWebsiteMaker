@@ -45,7 +45,7 @@ function CreateFoodHTML(foodNumber, FoodName, FoodPicUrl, DescriptionText, Aller
                       <div class='FoodContent'>
 
                           <div class='FoodTitle'>
-                              <h3>`+ FoodName +`</h3>
+                              <h2>`+ FoodName +`</h2>
                           </div>
                           
                           <div class='FoodDescriptions'>
@@ -70,7 +70,7 @@ function CreateFoodHTML(foodNumber, FoodName, FoodPicUrl, DescriptionText, Aller
 
                                   <p>Price Per Item: `+ PricePerItem +`$</p>
                                   <form class='DropDownForm'>
-                                  <select name='NumberDropDown' id='DropDown`+ foodNumber +`' class='NumberDropDown'>
+                                  <select name='NumberDropDown' aria-label='DropDown For Prices `+ foodNumber +`' id='DropDown`+ foodNumber +`' class='NumberDropDown'>
                                   <option value='0'>0</option>
                                   <option value='1'>1</option>
                                   <option value='2'>2</option>
