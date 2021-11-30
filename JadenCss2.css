@@ -2,7 +2,7 @@
 
   body{
     height: auto;
-    width: 99vh;
+    width: 99%;
     background-image: url("https://live.staticflickr.com/65535/50387900761_691518017d_b.jpg");
   }
 
@@ -108,7 +108,7 @@
     flex-direction: column;
     height: 100%;
     width: 90%;
-    margin-bottom: 2%
+    margin-bottom: 2%;
 
   }
 
@@ -130,7 +130,7 @@
     display: flex;
     flex-direction: row;
     background-color: #fefefe;
-    width: 100%; 
+    width: 90%; 
     height: 12vh; 
     border: 3px solid black;
     margin-top: 2%;
@@ -308,7 +308,7 @@
     width: 99%;
     background-image: url("https://live.staticflickr.com/65535/50387900761_691518017d_b.jpg");
   }
-  
+
   .FoodPic{
     width: 22%;
     height: 32vh;
@@ -411,8 +411,7 @@
     flex-direction: column;
     height: 100%;
     width: 90%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    margin-bottom: 2%;
 
   }
 
@@ -434,9 +433,10 @@
     display: flex;
     flex-direction: row;
     background-color: #fefefe;
-    width: 100%; 
+    width: 90%; 
     height: 12vh; 
     border: 3px solid black;
+    margin-top: 2%;
   }
 
   .NavBar {
@@ -600,5 +600,15 @@
     width: 80%;
     height: 60%;
   }
+  form{
+    height: 100%;
+    width: 100%;
+  }
+  
+  select{
+    height: 25%;
+    width: 50%;
+  }
+
 
 }
