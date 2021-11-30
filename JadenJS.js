@@ -24,8 +24,12 @@ function createWebsite(){
    var name = document.getElementById('WebsiteName').value;
    var logo = document.getElementById('WebsiteLogo').value;
 
+   var websiteBackground = document.getElementById('WebsiteBackground').value;
+   var pageBackground= document.getElementById('PageBackground').value;
+
    download('index.html', CreateOrderPage(foodButtonNumber, name, logo));
    download('CreatorsPage.html', CreateCreatorsPage(creatorButtonNumber, name, logo);
+    download('BakeSale.css', CreateCss(WebsiteBackground, PageBackground));
 
    /*
    CreateCreatorsPage(creatorButtonNumber);
@@ -34,6 +38,1219 @@ function createWebsite(){
    */
 }
 
+function CreateCss(WebsiteBackground, PageBackground){
+  
+  var css=`
+@media only screen and (max-width: 480px) {
+  .logoImage{
+    width: 10vh;
+    height: 10vh;
+  }
+
+  body{
+    height: auto;
+    width: 99%;
+  }
+
+  .FoodPic{
+    width: 22%;
+    height: 90%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+
+  .OrderItem{
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: Row;
+    height: 36vh;
+    width: 100%;
+    background-color: white;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+
+
+  .FoodContent{
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 36vh;
+    width: 74.5%;
+    background-color: white;
+   
+  }
+
+  .FoodTitle{
+     justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+
+  .FoodDescriptions{
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    height: 36vh;
+    width: 100%;
+    background-color: white;
+    font-size: 2vw;
+  }
+
+
+  .FoodDescriptionBox{
+     justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 33.3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: white;
+
+  }
+
+  .FoodDescriptionBox2{
+     justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 33.3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: white;
+
+  }
+
+  .FoodAmountInput{
+    width: 95%;
+    height: 25%;
+  }
+
+
+  .PageContent{
+    background: `+ PageBackground +`;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+    margin-bottom: 2%;
+  }
+
+  .Background{
+    background: `+ WebsiteBackground +`;    
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+  }
+
+  .HeadderBox {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    background-color: #fefefe;
+    width: 90%; 
+    height: 12vh; 
+    border: 3px solid black;
+    margin-top: 2%;
+  }
+
+  .NavBar {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    background-color: #fefefe;
+    width: 100%; 
+    height: 6vh; 
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+
+  .NavTab{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    width: 49.99%;
+    height: 100%;
+    color: white;
+    background-color: #000;
+    text-decoration: none;
+    border-right: 1.5px solid white;
+    font-size: 3vw;
+  }
+
+  .NavTab2{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    width: 49.99%;
+    height: 100%;
+    color: white;
+    background-color: #000;
+    text-decoration: none;
+    border-left: 1.5px solid white;
+    font-size: 3vw;
+  }
+
+  .NavTab:hover:not(.active), .NavTab2:hover:not(.active){
+    background-color: #555;
+  }
+
+
+
+  .SubTitle{
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 9vh;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+
+  .FormType1{
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 18vh;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+  .InputFeild1{
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    height: 9vh;
+    width: 100%;
+  }
+
+  .HalfInput{
+    width: 44%;
+    height: 60%;
+    font-size: 2vw;
+    border-radius: 2%;
+  }
+
+  .InputFeild2{
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    width: 100%;
+  }
+
+
+  .ThirdInput{
+    width: 27%;
+    height: 55%;
+    font-size: 2vw; 
+    border-radius: 2%;
+  }
+
+
+
+  .SubmitBox{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+  .SubmitButton{
+    width: 80%;
+    height: 60%;
+  }
+
+  .DropDownForm{
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+  }
+  
+  .NumberDropDown{
+    height: 20%;
+    width: 80%;
+  }
+
+  .autoSizeBox{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    padding-right: 2%;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+  .CardImage{
+    width: 100%;
+    height: 64vw;
+  }
+
+  .Card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 80%;
+    height: auto;
+    border: 3px solid black;
+    margin: 3%;
+  }
+
+  .Card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .CardInformation {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .PersonName{
+    font-size: 2vw;
+    font-weight: bold;
+  }
+
+  .CardText{
+    font-size: 2vw;
+
+  }
+
+
+
+  .SubTitle2{
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 9vh;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+
+  .SubTitle3{
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 9vh;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+
+  h1{
+    font-size: 5vw;
+  }
+  h2{
+    font-size: 4vw;
+  }
+  h3{
+    font-size: 3vw;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 872px) {
+
+  .logoImage{
+    width: 10vh;
+    height: 10vh;
+  }
+
+  body{
+    height: auto;
+    width: 99%;
+  }
+
+  .FoodPic{
+    width: 22%;
+    height: 90%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+
+  .OrderItem{
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: Row;
+    height: 36vw;
+    width: 100%;
+    background-color: white;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+
+
+  .FoodContent{
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 36vw;
+    width: 74.5%;
+    background-color: white;
+   
+  }
+
+  .FoodTitle{
+     justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+
+  .FoodDescriptions{
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    height: 36vw;
+    width: 100%;
+    background-color: white;
+    font-size: 2vw;
+  }
+
+
+  .FoodDescriptionBox{
+     justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 33.3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: white;
+
+  }
+
+  .FoodDescriptionBox2{
+     justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 33.3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: white;
+
+  }
+
+  .FoodAmountInput{
+    width: 95%;
+    height: 25%;
+  }
+
+
+  .PageContent{
+    background: `+ PageBackground +`;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+    margin-bottom: 2%;
+
+  }
+
+  .Background{
+    background: `+ WebsiteBackground +`;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+  }
+
+  .HeadderBox {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    background-color: #fefefe;
+    width: 90%; 
+    height: 12vh; 
+    border: 3px solid black;
+    margin-top: 2%;
+  }
+
+  .NavBar {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    background-color: #fefefe;
+    width: 100%; 
+    height: 6vh; 
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+
+  .NavTab{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    width: 49.99%;
+    height: 100%;
+    color: white;
+    background-color: #000;
+    text-decoration: none;
+    border-right: 1.5px solid white;
+    font-size: 3vw;
+  }
+
+  .NavTab2{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    width: 49.99%;
+    height: 100%;
+    color: white;
+    background-color: #000;
+    text-decoration: none;
+    border-left: 1.5px solid white;
+    font-size: 3vw;
+  }
+
+  .NavTab:hover:not(.active), .NavTab2:hover:not(.active){
+    background-color: #555;
+  }
+
+
+
+  .SubTitle{
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 9vh;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+
+  .FormType1{
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 18vh;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+  .InputFeild1{
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    height: 9vh;
+    width: 100%;
+  }
+
+  .HalfInput{
+    width: 47%;
+    height: 60%;
+    border-radius: 2%;
+  }
+
+
+  .InputFeild2{
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    width: 100%;
+  }
+
+  .ThirdInput{
+    width: 30%;
+    height: 55%; 
+    border-radius: 2%;
+  }
+
+
+  .SubmitBox{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    width: 96%;
+
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+  .SubmitButton{
+    width: 80%;
+    height: 60%;
+  }
+  .DropDownForm{
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    width: 100%;
+  }
+  
+  .NumberDropDown{
+    height: 20%;
+    width: 80%;
+  }
+
+  .autoSizeBox{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    padding-right: 2%;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+  .CardImage{
+    width: 100%;
+    height: auto;
+  }
+
+  .Card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 80%;
+    height: auto;
+    border: 3px solid black;
+    margin: 3%;
+  }
+
+  .Card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .CardInformation {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .PersonName{
+    font-size: 2vw;
+    font-weight: bold;
+  }
+
+  .CardText{
+    font-size: 2vw;
+
+  }
+
+
+  .SubTitle2{
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 9vh;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+
+  .SubTitle3{
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 9vh;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+  h1{
+    font-size: 5vw;
+  }
+  h2{
+    font-size: 4vw;
+  }
+  h3{
+    font-size: 3vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 873px) {
+  
+  .logoImage{
+    width: 10vh;
+    height: 10vh;
+  }
+
+  body{
+    height: auto;
+    width: 99%;
+  }
+
+  .FoodPic{
+    width: 22%;
+    height: 90%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+
+  .OrderItem{
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: Row;
+    height: 36vh;
+    width: 100%;
+    background-color: white;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+
+
+  .FoodContent{
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 36vh;
+    width: 74.5%;
+    background-color: white;
+   
+  }
+
+  .FoodTitle{
+     justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+
+  .FoodDescriptions{
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    height: 36vh;
+    width: 100%;
+    background-color: white;
+  }
+
+
+  .FoodDescriptionBox{
+     justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 33.3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: white;
+
+  }
+
+  .FoodDescriptionBox2{
+     justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 33.3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: white;
+
+  }
+
+  .FoodAmountInput{
+    width: 95%;
+    height: 25%;
+  }
+
+
+  .PageContent{
+    background: `+ PageBackground +`;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+    margin-bottom: 2%;
+
+  }
+
+  .Background{
+    background: `+ WebsiteBackground +`;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+  }
+
+  .HeadderBox {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    background-color: #fefefe;
+    width: 90%; 
+    height: 12vh; 
+    border: 3px solid black;
+    margin-top: 2%;
+  }
+
+  .NavBar {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    background-color: #fefefe;
+    width: 100%; 
+    height: 6vh; 
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+
+  .NavTab{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    width: 49.99%;
+    height: 100%;
+    color: white;
+    background-color: #000;
+    text-decoration: none;
+    border-right: 1.5px solid white;
+  }
+
+  .NavTab2{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    width: 49.99%;
+    height: 100%;
+    color: white;
+    background-color: #000;
+    text-decoration: none;
+    border-left: 1.5px solid white;
+  }
+
+  .NavTab:hover:not(.active), .NavTab2:hover:not(.active){
+    background-color: #555;
+  }
+
+
+
+  .SubTitle{
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 9vh;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+
+  .FormType1{
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 18vh;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+  .InputFeild1{
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    height: 9vh;
+    width: 100%;
+  }
+
+  .HalfInput{
+    width: 47%;
+    height: 60%;
+  }
+
+  .InputFeild2{
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    width: 100%;
+  }
+
+  .ThirdInput{
+    width: 30%;
+    height: 55%; 
+  }
+
+
+  .SubmitBox{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+  .SubmitButton{
+    width: 80%;
+    height: 60%;
+  }
+  
+  .DropDownForm{
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .NumberDropDown{
+    height: 25%;
+    width: 50%;
+  }
+
+
+  .autoSizeBox{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    padding-right: 2%;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+  .CardImage{
+    width: 100%;
+    height: 32vw;
+  }
+
+  .Card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 41%;
+    height: auto;
+    border: 3px solid black;
+    margin: 3%;
+  }
+
+  .Card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .CardInformation {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .PersonName{
+    font-size: 1.5vw;
+    font-weight: bold;
+  }
+
+  .CardText{
+    font-size: 1.5vw;
+  }
+
+
+
+  .SubTitle2{
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 9vh;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+
+  .SubTitle3{
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 9vh;
+    width: 96%;
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+
+
+}
+  `;
+
+  return css;
+}
 
 function CreateFoodHTML(foodNumber, FoodName, FoodPicUrl, DescriptionText, AllergyText, PricePerItem){
     var pageHTML=`
