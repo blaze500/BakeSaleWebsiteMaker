@@ -24,6 +24,8 @@ function createWebsite(){
    console.log(document.getElementById('WebsiteBackground').value);
 
    download('test.html', CreateOrderPage(foodButtonNumber));
+   download('west.html', CreateCreatorsPage(creatorButtonNumber));
+   alert("captin");
    /*
    CreateCreatorsPage(creatorButtonNumber);
    CreateCss();
@@ -67,8 +69,8 @@ function CreateFoodHTML(foodNumber, FoodName, FoodPicUrl, DescriptionText, Aller
                               <div class='FoodDescriptionBox2'>
 
                                   <p>Price Per Item: `+ PricePerItem +`$</p>
-                                  <form>
-                                  <select name="NumberDropDown" id="DropDown`+ foodNumber +`">
+                                  <form class='DropDownForm'>
+                                  <select name="NumberDropDown" id="DropDown`+ foodNumber +`" class='NumberDropDown'>
                                   <option value="0">0</option>
                                   <option value="1">1</option>
                                   <option value="2">2</option>
@@ -194,17 +196,129 @@ function getFoodInformation(foodNumber){
 }
 
 
+
+
+
+
+
+
+
+
+
 function CreateCreatorsPage(creatorAmount){
+  var startOfPage=`
 
-}
+<!DOCTYPE html>
+<html lang='en'>
 
-/*
-function CreateCss(BackgroundURL(picture),){
-    for(var i=1; i<foodAmount; i++){
-    allFood.push(getFoodInformation(i));
+<head> 
+    
+    <title>Bake Sale Website Maker</title>
+    
+    <meta name='description' content='This is to make a Bake Sale Website'>
+
+    <meta charset='UTF-8'>
+    
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <meta name='author' content='Jaden'>
+
+    <link rel='stylesheet' href='JadenCss2.css' />
+
+</head>
+        
+
+
+    
+    <body>
+
+        <div class='Background'>
+
+           <div class='HeadderBox' role='banner' aria-label='Page Title: Bake Sale Website Maker'> <h1>Bake Sale Website Maker</h1> </div>
+
+            <div class='PageContent' role='main' aria-label='Bake Sale Website'>                    
+
+                <nav class='NavBar' role='navigation' aria-label='Navagation Bar'>
+                    <a class='NavTab' href=''>Make Website</a>
+                    <a class='NavTab2' href=''>Creators</a>
+                </nav>
+
+
+
+              <div class='SubTitle3' role='complementary' aria-label='Please Put In The Information'>
+
+                    <h2>Creators Of This Website</h2>
+
+                </div>
+
+
+                <div class='autoSizeBox'>
+`;
+
+  var allCreators=[];
+  
+  for(var i=1; i<=creatorAmount; i++){
+    allCreators.push(getCreatorInformation(i));
   }
+
+  for(var i=0; i<allCreators.length; i++){
+    startOfPage= startOfPage + CreateCreatorHTML(i+1, allCreators[i][0], allCreators[i][1], allCreators[i][2]);
+  }
+  
+
+var restOfPage=`
+
+
+              </div>
+
+
+
+
+            </div>
+        </div>
+        <script src='JadenJS.js'></script>
+    </body>
+
+</html>
+
+`;
+
+return startOfPage+restOfPage;
 }
-*/
+
+
+
+
+
+
+
+function getCreatorInformation(number){
+  var creatorInfo=[];
+  for(var i=1; i<=3; i++){
+    creatorInfo.push(document.getElementById('Creator'+number+'Input'+ i).value); 
+  } 
+  return creatorInfo;
+}
+
+
+function CreateCreatorHTML(num, source, name, description){
+  var creatorCard =`
+                  <div class='Card'>
+                    
+                    <img src='`+ source +`' role='complementary' aria-label='A Card Of Creator Number `+ num +` ' class='CardImage'>
+
+                    <div class='CardInformation'>
+                      <p class='PersonName'>`+ name +`</p> 
+                      <p class='CardText'>`+ description+`</p>
+                       
+                    </div>
+                  </div>
+  `
+  return creatorCard;
+}
+
+
+
 
 function CreateJavascript(foodAmount){
 
