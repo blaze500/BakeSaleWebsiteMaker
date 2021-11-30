@@ -34,7 +34,7 @@
     align-items: center;
     flex-wrap: nowrap;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #fefefe;
     width: 90%; 
     height: 12vh; 
@@ -99,7 +99,7 @@
 
 
   .SubTitle{
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     display: flex;
@@ -113,6 +113,7 @@
     border-left: 3px solid black;
     border-right: 3px solid black;
   }
+
 
 
   .FormType1{
@@ -281,7 +282,7 @@
   }
 
   .SubTitle2{
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: nowrap;
     display: flex;
@@ -325,7 +326,7 @@
   }
   
   .SubTitle3{
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     display: flex;
@@ -353,10 +354,10 @@
   }
 
   h1{
-    font-size: 4vw;
+    font-size: 5vw;
   }
   h2{
-    font-size: 3vw;
+    font-size: 4vw;
   }
 
 
@@ -400,13 +401,13 @@
     width: 100%;
 
   }
-
+  
   .HeadderBox {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #fefefe;
     width: 90%; 
     height: 12vh; 
@@ -471,7 +472,7 @@
 
 
   .SubTitle{
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     display: flex;
@@ -485,6 +486,7 @@
     border-left: 3px solid black;
     border-right: 3px solid black;
   }
+
 
 
   .FormType1{
@@ -653,7 +655,7 @@
   }  
   
   .SubTitle2{
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: nowrap;
     display: flex;
@@ -666,6 +668,7 @@
     border-left: 3px solid black;
     border-right: 3px solid black;
   }
+
 
   .CreatorPageContent{
     justify-content: flex-start;
@@ -697,7 +700,7 @@
 
 
   .SubTitle3{
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     display: flex;
@@ -792,7 +795,7 @@
     align-items: center;
     flex-wrap: nowrap;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #fefefe;
     width: 90%; 
     height: 12vh; 
@@ -853,9 +856,8 @@
   }
 
 
-
   .SubTitle{
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     display: flex;
@@ -1041,7 +1043,7 @@
   }
 
   .SubTitle2{
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: nowrap;
     display: flex;
@@ -1085,7 +1087,7 @@
 
 
   .SubTitle3{
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     display: flex;
