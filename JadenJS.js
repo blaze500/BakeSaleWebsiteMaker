@@ -52,7 +52,7 @@ function CreateFoodHTML(foodNumber, FoodName, FoodPicUrl, DescriptionText, Aller
 
                               <div class='FoodDescriptionBox'>
 
-                                  <p>Description:`+ DescriptionText +`</p>
+                                  <p>Description: `+ DescriptionText +`</p>
                                   
                               </div>
 
@@ -60,7 +60,7 @@ function CreateFoodHTML(foodNumber, FoodName, FoodPicUrl, DescriptionText, Aller
 
                               <div class='FoodDescriptionBox'>
 
-                                  <p>Allergies:`+ AllergyText +`</p>
+                                  <p>Allergies: `+ AllergyText +`</p>
                                   
                               </div>
 
@@ -301,11 +301,11 @@ function getCreatorInformation(number){
 }
 
 
-function CreateCreatorHTML(num, source, name, description){
+function CreateCreatorHTML(num, name, source, description){
   var creatorCard =`
                   <div class='Card'  role='complementary' aria-label='A Card Of Creator Number `+ num +` '>
                     
-                    <img src='`+ source +`'  alt='A Picture Creator Number `+ num +` ' aria-label='A Picture Creator Number `+ num +` ' class='CardImage'>
+                    <img src='url(`+ source +`)'  alt='A Picture Creator Number `+ num +` ' aria-label='A Picture Creator Number `+ num +` ' class='CardImage'>
 
                     <div class='CardInformation'>
                       <p class='PersonName'>`+ name +`</p> 
