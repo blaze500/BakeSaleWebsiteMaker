@@ -1,8 +1,8 @@
 var Food=3;
 var Creator=1;
 
-document.getElementById("FoodAddSubtractButtonSet3").style.display = 'flex';
-document.getElementById("CreatorAddSubtractButtonSet1").style.display = 'flex';
+document.getElementById('FoodAddSubtractButtonSet3').style.display = 'flex';
+document.getElementById('CreatorAddSubtractButtonSet1').style.display = 'flex';
 
 hideFourm(3,7,'Food');
 hideFourm(1,4,'Creator');
@@ -25,7 +25,7 @@ function createWebsite(){
 
    download('test.html', CreateOrderPage(foodButtonNumber));
    download('west.html', CreateCreatorsPage(creatorButtonNumber));
-   alert("captin");
+   alert('captin');
    /*
    CreateCreatorsPage(creatorButtonNumber);
    CreateCss();
@@ -40,7 +40,7 @@ function CreateFoodHTML(foodNumber, FoodName, FoodPicUrl, DescriptionText, Aller
                   <div class='OrderItem' id='Food`+ foodNumber + `' role='complementary' aria-label='Food `+ foodNumber +` Information Form'>
                       
                       
-                      <img src="`+ FoodPicUrl +`" class='FoodPic' aria-label='Picture of Food `+ foodNumber +`'>
+                      <img src='`+ FoodPicUrl +`' class='FoodPic' aria-label='Picture of Food `+ foodNumber +`'>
 
                       <div class='FoodContent'>
 
@@ -70,18 +70,18 @@ function CreateFoodHTML(foodNumber, FoodName, FoodPicUrl, DescriptionText, Aller
 
                                   <p>Price Per Item: `+ PricePerItem +`$</p>
                                   <form class='DropDownForm'>
-                                  <select name="NumberDropDown" id="DropDown`+ foodNumber +`" class='NumberDropDown'>
-                                  <option value="0">0</option>
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                  <option value="4">4</option>
-                                  <option value="5">5</option>
-                                  <option value="6">6</option>
-                                  <option value="7">7</option>
-                                  <option value="8">8</option>
-                                  <option value="9">9</option>
-                                  <option value="10">10</option>
+                                  <select name='NumberDropDown' id='DropDown`+ foodNumber +`' class='NumberDropDown'>
+                                  <option value='0'>0</option>
+                                  <option value='1'>1</option>
+                                  <option value='2'>2</option>
+                                  <option value='3'>3</option>
+                                  <option value='4'>4</option>
+                                  <option value='5'>5</option>
+                                  <option value='6'>6</option>
+                                  <option value='7'>7</option>
+                                  <option value='8'>8</option>
+                                  <option value='9'>9</option>
+                                  <option value='10'>10</option>
                                   </select>
                                   </form>
                                   
@@ -387,7 +387,7 @@ function AddRemoveButtonFunction(min, max, current, itemName){
 function AddFuntion(min, max, current, itemName){
 
   if(current==max){
-    window.alert("You cannot have more than " + current + ' ' + itemName + "s!");
+    window.alert('You cannot have more than ' + current + ' ' + itemName + 's!');
   }
 
   else{
@@ -417,7 +417,7 @@ function AddFuntion(min, max, current, itemName){
 function RemoveFuntion(min, max, current, itemName){
 
   if(current==min){
-    window.alert("You cannot have less than " + current + ' ' + itemName + "!");
+    window.alert('You cannot have less than ' + current + ' ' + itemName + '!');
   }
   
   else{ 
