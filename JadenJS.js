@@ -23,9 +23,9 @@ function createWebsite(){
 
    console.log(document.getElementById('WebsiteBackground').value);
 
-   download('test.html', CreateOrderPage(foodButtonNumber));
-   download('west.html', CreateCreatorsPage(creatorButtonNumber));
-   alert('captin');
+   download('index.html', CreateOrderPage(foodButtonNumber));
+   download('CreatorsPage.html', CreateCreatorsPage(creatorButtonNumber));
+
    /*
    CreateCreatorsPage(creatorButtonNumber);
    CreateCss();
@@ -107,9 +107,9 @@ function CreateOrderPage(foodAmount){
 
 <head> 
     
-    <title>Bake Sale Website Maker</title>
+    <title>Bake Sale Order Page</title>
     
-    <meta name='description' content='This is to make a Bake Sale Website'>
+    <meta name='description' content='This is the ordering page fo this Bake Sale Website'>
 
     <meta charset='UTF-8'>
     
@@ -117,7 +117,7 @@ function CreateOrderPage(foodAmount){
 
     <meta name='author' content='Jaden'>
 
-    <link rel='stylesheet' href='JadenCss2.css' />
+    <link rel='stylesheet' href='BakeSale.css' />
 
 </head>
         
@@ -133,8 +133,8 @@ function CreateOrderPage(foodAmount){
             <div class='PageContent' role='main' aria-label='Bake Sale Website'>    
 
                 <nav class='NavBar' aria-label='Navagation Bar'>
-                    <a class='NavTab' href=''>Make Website</a>
-                    <a class='NavTab2' href=''>Creators</a>
+                    <a class='NavTab' href='index.html'>Make Website</a>
+                    <a class='NavTab2' href='CreatorsPage.html'>Creators</a>
                 </nav>
 
 
@@ -213,9 +213,9 @@ function CreateCreatorsPage(creatorAmount){
 
 <head> 
     
-    <title>Bake Sale Website Maker</title>
+    <title>Bake Sale Website Creator Page</title>
     
-    <meta name='description' content='This is to make a Bake Sale Website'>
+    <meta name='description' content='This is to look at the creators of this website'>
 
     <meta charset='UTF-8'>
     
@@ -223,7 +223,7 @@ function CreateCreatorsPage(creatorAmount){
 
     <meta name='author' content='Jaden'>
 
-    <link rel='stylesheet' href='JadenCss2.css' />
+    <link rel='stylesheet' href='BakeSale.css' />
 
 </head>
         
@@ -239,8 +239,8 @@ function CreateCreatorsPage(creatorAmount){
             <div class='PageContent' role='main' aria-label='Bake Sale Website'>                    
 
                 <nav class='NavBar' aria-label='Navagation Bar'>
-                    <a class='NavTab' href=''>Make Website</a>
-                    <a class='NavTab2' href=''>Creators</a>
+                    <a class='NavTab' href='index.html'>Make Website</a>
+                    <a class='NavTab2' href='CreatorsPage.html'>Creators</a>
                 </nav>
 
 
