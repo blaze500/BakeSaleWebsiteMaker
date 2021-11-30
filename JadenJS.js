@@ -305,7 +305,7 @@ function CreateCreatorHTML(num, name, source, description){
   var creatorCard =`
                   <div class='Card'  role='complementary' aria-label='A Card Of Creator Number `+ num +` '>
                     
-                    <img src='url(`+ source +`)'  alt='A Picture Creator Number `+ num +` ' aria-label='A Picture Creator Number `+ num +` ' class='CardImage'>
+                    <img src='`+ source +`'  alt='A Picture Creator Number `+ num +` ' aria-label='A Picture Creator Number `+ num +` ' class='CardImage'>
 
                     <div class='CardInformation'>
                       <p class='PersonName'>`+ name +`</p> 
