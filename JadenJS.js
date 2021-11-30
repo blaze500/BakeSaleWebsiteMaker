@@ -28,15 +28,20 @@ function createWebsite(){
    var pageBackground= document.getElementById('PageBackground').value;
 
    download('index.html', CreateOrderPage(foodButtonNumber, name, logo));
-   download('CreatorsPage.html', CreateCreatorsPage(creatorButtonNumber, name, logo);
-    download('BakeSale.css', CreateCss(WebsiteBackground, PageBackground));
+   download('CreatorsPage.html', CreateCreatorsPage(creatorButtonNumber, name, logo));
+  download('BakeSale.css', CreateCss(WebsiteBackground, PageBackground));
 
    /*
-   CreateCreatorsPage(creatorButtonNumber);
-   CreateCss();
    CreateJavascript(foodButtonNumber);
    */
 }
+
+
+function CreateJavascript(foodAmount){
+  var javascript=`
+  `;
+}
+
 
 function CreateCss(WebsiteBackground, PageBackground){
   
@@ -1535,12 +1540,6 @@ function CreateCreatorHTML(num, name, source, description){
   return creatorCard;
 }
 
-
-
-
-function CreateJavascript(foodAmount){
-
-}
 
 
 
