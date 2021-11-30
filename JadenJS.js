@@ -21,10 +21,11 @@ function createWebsite(){
 
   var creatorButtonNumber = findNonHiddenButton('CreatorAddSubtractButtonSet', 5);
 
-   console.log(document.getElementById('WebsiteBackground').value);
+   var name = document.getElementById('WebsiteName').value;
+   var logo = document.getElementById('WebsiteLogo').value;
 
-   download('index.html', CreateOrderPage(foodButtonNumber));
-   download('CreatorsPage.html', CreateCreatorsPage(creatorButtonNumber));
+   download('index.html', CreateOrderPage(foodButtonNumber, name, logo));
+   download('CreatorsPage.html', CreateCreatorsPage(creatorButtonNumber, name, logo);
 
    /*
    CreateCreatorsPage(creatorButtonNumber);
@@ -100,7 +101,7 @@ function CreateFoodHTML(foodNumber, FoodName, FoodPicUrl, DescriptionText, Aller
 }
 
 
-function CreateOrderPage(foodAmount){
+function CreateOrderPage(foodAmount, name, logo){
   var startOfPage=`
 <!DOCTYPE html>
 <html lang='en'>
@@ -128,7 +129,7 @@ function CreateOrderPage(foodAmount){
 
         <div class='Background'>
 
-            <div class='HeadderBox' role='banner' aria-label='Page Title: Bake Sale Website' > <h1>Bake Sale Website</h1> </div>
+            <div class='HeadderBox' role='banner' aria-label='Page Title: Bake Sale Website' > <img src='`+ logo +`' class='logoImage'> <h1> `+ name +` </h1> <img src='`+ logo +`' class='logoImage'> </div>
             
             <div class='PageContent' role='main' aria-label='Bake Sale Website'>    
 
@@ -205,7 +206,7 @@ function getFoodInformation(foodNumber){
 
 
 
-function CreateCreatorsPage(creatorAmount){
+function CreateCreatorsPage(creatorAmount, name, logo){
   var startOfPage=`
 
 <!DOCTYPE html>
@@ -234,7 +235,7 @@ function CreateCreatorsPage(creatorAmount){
 
         <div class='Background'>
 
-           <div class='HeadderBox' role='banner' aria-label='Page Title: Bake Sale Website Maker'> <h1>Bake Sale Website Maker</h1> </div>
+           <div class='HeadderBox' role='banner' aria-label='Page Title: Bake Sale Website Maker'> <img src='`+ logo +`' class='logoImage'> <h1> `+ name +` </h1> <img src='`+ logo +`' class='logoImage'> </div>
 
             <div class='PageContent' role='main' aria-label='Bake Sale Website'>                    
 
