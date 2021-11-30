@@ -122,7 +122,7 @@
     flex-wrap: nowrap;
     display: flex;
     flex-direction: column;
-    height: 18vh;
+    height: auto;
     width: 96%;
     background-color: white;
     padding-left: 2%;
@@ -145,6 +145,7 @@
   .HalfInput{
     width: 44%;
     height: 60%;
+    font-size: 2vw;
   }
 
 
@@ -155,7 +156,7 @@
     flex-wrap: nowrap;
     display: flex;
     flex-direction: column;
-    height: 28vh;
+    height: auto;
     width: 96%;
     background-color: white;
     padding-left: 2%;
