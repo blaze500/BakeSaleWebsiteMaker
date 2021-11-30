@@ -40,7 +40,7 @@ function CreateFoodHTML(foodNumber, FoodName, FoodPicUrl, DescriptionText, Aller
                   <div class='OrderItem' id='Food`+ foodNumber + `' role='complementary' aria-label='Food `+ foodNumber +` Information Form'>
                       
                       
-                      <img src='`+ FoodPicUrl +`' class='FoodPic' aria-label='Picture of Food `+ foodNumber +`'>
+                      <img src='`+ FoodPicUrl +`' class='FoodPic' alt='Picture of Food `+ foodNumber +`' aria-label='Picture of Food `+ foodNumber +`'>
 
                       <div class='FoodContent'>
 
@@ -132,7 +132,7 @@ function CreateOrderPage(foodAmount){
             
             <div class='PageContent' role='main' aria-label='Bake Sale Website'>    
 
-                <nav class='NavBar' role='navigation' aria-label='Navagation Bar'>
+                <nav class='NavBar' aria-label='Navagation Bar'>
                     <a class='NavTab' href=''>Make Website</a>
                     <a class='NavTab2' href=''>Creators</a>
                 </nav>
@@ -238,7 +238,7 @@ function CreateCreatorsPage(creatorAmount){
 
             <div class='PageContent' role='main' aria-label='Bake Sale Website'>                    
 
-                <nav class='NavBar' role='navigation' aria-label='Navagation Bar'>
+                <nav class='NavBar' aria-label='Navagation Bar'>
                     <a class='NavTab' href=''>Make Website</a>
                     <a class='NavTab2' href=''>Creators</a>
                 </nav>
@@ -303,9 +303,9 @@ function getCreatorInformation(number){
 
 function CreateCreatorHTML(num, source, name, description){
   var creatorCard =`
-                  <div class='Card'>
+                  <div class='Card'  role='complementary' aria-label='A Card Of Creator Number `+ num +` '>
                     
-                    <img src='`+ source +`' role='complementary' aria-label='A Card Of Creator Number `+ num +` ' class='CardImage'>
+                    <img src='`+ source +`'  alt='A Picture Creator Number `+ num +` ' aria-label='A Picture Creator Number `+ num +` ' class='CardImage'>
 
                     <div class='CardInformation'>
                       <p class='PersonName'>`+ name +`</p> 
