@@ -11,16 +11,38 @@ AddRemoveButtonFunction(1,5,Creator,'Creator');
 AddRemoveButtonFunction(1,10,Food,'Food');
 
 document.getElementById('SubmitButton').onclick = function(){
+  var errors = validateForms();
+  if(errors.length ==0){
+    SubmitForms(); 
+    createWebsite(); 
+    window.alert('Website Made!');
+  }
+  else{
+  
+    var text=``;
+  
+    for(var i=0; i<errors.length; i++){
+      
+      text += ``+ (i+1) +`. `+ errors[i] +`
 
-  SubmitForms(); 
-  createWebsite(); 
-  window.alert('Website Made!');
+`;
+    
+    }
+    
+    window.alert(text);
+  
+  }
 
 };
 
 
 
 function validateForms(){
+
+  var foodButtonNumber = new findNonHiddenButton('FoodAddSubtractButtonSet', 10).findNonHiddenButton();
+
+  var creatorButtonNumber = new findNonHiddenButton('CreatorAddSubtractButtonSet', 5).findNonHiddenButton();
+
 
   var errorsReported = [];
 
@@ -40,139 +62,53 @@ function validateForms(){
     errorsReported.push('Page Background Picture Url be a link or be left blank');
   }    
 
-  document.getElementById('PageBackground').value    
 
 
 
+  for(var i=1; i<=foodButtonNumber; i++){
+    if(document.getElementById('Food'+i+'Input1').value == ''){
+      errorsReported.push('Food Name in Food '+ i +' cannot be left blank');
+    }
 
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food1Input1').value 
-  if(!document.getElementById('Food1Input2').value.includes("https://") && !document.getElementById('Food1Input2').value.includes(".")){}       
-  if((document.getElementById('Food1Input3').value.length > 0) && !document.getElementById('Food1Input3').value.includes("https://") && !document.getElementById('Food1Input3').value.includes(".")){}    
-  if(document.getElementById('Food1Input4').value == ''){}
-  if(document.getElementById('Food1Input5').value == ''){}    
-  if(document.getElementById('Food1Input6').value.match(/^[0-9]+$/) != null){}
+    if(!document.getElementById('Food'+i+'Input2').value.includes("https://") && !document.getElementById('Food'+i+'Input2').value.includes(".")){
+      errorsReported.push('Food Picture Url in Food '+ i +' cannot be left blank');
+    } 
 
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food2Input1').value 
-  if(!document.getElementById('Food2Input2').value.includes("https://") && !document.getElementById('Food2Input2').value.includes(".")){}   
-  if((document.getElementById('Food2Input3').value.length > 0) && !document.getElementById('Food2Input3').value.includes("https://") && !document.getElementById('Food2Input3').value.includes(".")){}   
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food2Input4').value    
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food2Input5').value 
-  if(document.getElementById('Food2Input6').value.match(/^[0-9]+$/) != null){}   
+    if((document.getElementById('Food'+i+'Input3').value.length > 0) && !document.getElementById('Food'+i+'Input3').value.includes("https://") && !document.getElementById('Food'+i+'Input3').value.includes(".")){
+      errorsReported.push('Background Url in Food '+ i +' cannot be left blank and must be a URL');
+    } 
 
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food3Input1').value
-  if(!document.getElementById('Food3Input2').value.includes("https://") && !document.getElementById('Food3Input2').value.includes(".")){}    
-  if((document.getElementById('Food3Input3').value.length > 0) && !document.getElementById('Food3Input3').value.includes("https://") && !document.getElementById('Food3Input3').value.includes(".")){}     
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food3Input4').value    
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food3Input5').value
-  if(document.getElementById('Food3Input6').value.match(/^[0-9]+$/) != null){}    
+    if(document.getElementById('Food'+i+'Input4').value == ''){
+      errorsReported.push('Desciption Text in Food '+ i +' cannot be left blank');
+    }
 
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food4Input1').value    
-  if(!document.getElementById('Food4Input2').value.includes("https://") && !document.getElementById('Food4Input2').value.includes(".")){}
-  if((document.getElementById('Food4Input3').value.length > 0) && !document.getElementById('Food4Input3').value.includes("https://") && !document.getElementById('Food4Input3').value.includes(".")){}     
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food4Input4').value    
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food4Input5').value    
-  if(document.getElementById('Food4Input6').value.match(/^[0-9]+$/) != null){}
+    if(document.getElementById('Food'+i+'Input5').value == ''){
+      errorsReported.push('Allergy Text in Food '+ i +' cannot be left blank');
+    }    
 
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food5Input1').value
-  if(!document.getElementById('Food5Input2').value.includes("https://") && !document.getElementById('Food5Input2').value.includes(".")){}    
-  if((document.getElementById('Food5Input3').value.length > 0) && !document.getElementById('Food5Input3').value.includes("https://") && !document.getElementById('Food5Input3').value.includes(".")){}   
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food5Input4').value    
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food5Input5').value    
-  if(document.getElementById('Food5Input6').value.match(/^[0-9]+$/) != null){}
+    if(((document.getElementById('Food'+i+'Input6').value.match(/^[0-9]+$/) != null && document.getElementById('Food'+i+'Input6').value.match(/^[a-zA-Z]+$/) == null) || (document.getElementById('Food'+i+'Input6').value != '')) == false){
+      errorsReported.push('Price Per Item in Food '+ i +' cannot be left blank and must contain a number');
+    }
 
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food6Input1').value    
-  if(!document.getElementById('Food6Input2').value.includes("https://") && !document.getElementById('Food6Input2').value.includes(".")){}
-  if((document.getElementById('Food6Input3').value.length > 0) && !document.getElementById('Food6Input3').value.includes("https://") && !document.getElementById('Food6Input3').value.includes(".")){}     
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food6Input4').value    
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food6Input5').value    
-  if(document.getElementById('Food6Input6').value.match(/^[0-9]+$/) != null){}
+  }
+  
+  for(var i=1; i<=creatorButtonNumber; i++){
+    
+    if(document.getElementById('Creator'+i+'Input1').value == ''){
+      errorsReported.push('Name in Creator '+ i +' cannot be left blank');
+    }
 
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food7Input1').value  
-  if(!document.getElementById('Food7Input2').value.includes("https://") && !document.getElementById('Food7Input2').value.includes(".")){}  
-  if((document.getElementById('Food7Input3').value.length > 0) && !document.getElementById('Food7Input3').value.includes("https://") && !document.getElementById('Food7Input3').value.includes(".")){}     
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food7Input4').value    
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food7Input5').value    
-  if(document.getElementById('Food7Input6').value.match(/^[0-9]+$/) != null){}
+    if(!document.getElementById('Creator'+i+'Input2').value.includes("https://") && !document.getElementById('Creator'+i+'Input2').value.includes(".")){
+      errorsReported.push('Picture Url in Creator '+ i +' cannot be left blank and must be a URL');
+    }
 
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food8Input1').value    
-  if(!document.getElementById('Food8Input2').value.includes("https://") && !document.getElementById('Food8Input2').value.includes(".")){}
-  if((document.getElementById('Food8Input3').value.length > 0) && !document.getElementById('Food8Input3').value.includes("https://") && !document.getElementById('Food8Input3').value.includes(".")){}   
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food8Input4').value    
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food8Input5').value    
-  if(document.getElementById('Food8Input6').value.match(/^[0-9]+$/) != null){}
+    if(document.getElementById('Creator'+i+'Input3').value == ''){
+      errorsReported.push('Description in Creator '+ i +' cannot be left blank');
+    }
 
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food9Input1').value  
-  if(!document.getElementById('Food9Input2').value.includes("https://") && !document.getElementById('Food9Input2').value.includes(".")){}  
-  if((document.getElementById('Food9Input3').value.length > 0) && !document.getElementById('Food9Input3').value.includes("https://") && !document.getElementById('Food9Input3').value.includes(".")){}   
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food9Input4').value    
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food9Input5').value    
-  if(document.getElementById('Food9Input6').value.match(/^[0-9]+$/) != null){}
+  }
 
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food10Input1').value   
-  if(!document.getElementById('Food10Input2').value.includes("https://") && !document.getElementById('Food10Input2').value.includes(".")){} 
-  if((document.getElementById('Food10Input3').value.length > 0) && !document.getElementById('Food10Input3').value.includes("https://") && !document.getElementById('Food10Input3').value.includes(".")){}    
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food10Input4').value    
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Food10Input5').value    
-  if(document.getElementById('Food10Input6').value.match(/^[0-9]+$/) != null){}
-
-
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Creator1Input1').value    
-  if(!document.getElementById('Creator1Input2').value.includes("https://") && !document.getElementById('Creator1Input2').value.includes(".")){}
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Creator1Input3').value   
-
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Creator2Input1').value   
-  if(!document.getElementById('Creator2Input2').value.includes("https://")  && !document.getElementById('Creator2Input2').value.includes(".")){}
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Creator2Input3').value   
-
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Creator3Input1').value    
-  if(!document.getElementById('Creator3Input2').value.includes("https://")  && !document.getElementById('Creator3Input2').value.includes(".")){}
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Creator3Input3').value   
-
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Creator4Input1').value    
-  if(!document.getElementById('Creator4Input2').value.includes("https://") && !document.getElementById('Creator4Input2').value.includes(".")){}
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Creator4Input3').value   
-
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Creator5Input1').value
-  if(!document.getElementById('Creator5Input2').value.includes("https://") && !document.getElementById('Creator5Input2').value.includes(".")){}
-  if(document.getElementById('').value == ''){}
-  document.getElementById('Creator5Input3').value   
+  return errorsReported;   
 
 }
 
@@ -497,12 +433,10 @@ class CreatorsText{
     var allCreators=[];
     
     for(var i=1; i<= this.creatorAmount; i++){
-      window.alert('print2');
       allCreators.push(new CreatorInformation(i).getCreatorInformation());
     }
 
     for(var i=0; i<allCreators.length; i++){
-      window.alert('print1');
       startOfPage = startOfPage + this.CreateCreatorHTML(i+1, allCreators[i][0], allCreators[i][1], allCreators[i][2]);
     }
     
