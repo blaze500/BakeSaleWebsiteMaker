@@ -1,15 +1,19 @@
 var Food=3;
 var Creator=1;
 
+/* Shows the buttons for the starting food and creator that needs them */
 document.getElementById('FoodAddSubtractButtonSet3').style.display = 'flex';
 document.getElementById('CreatorAddSubtractButtonSet1').style.display = 'flex';
 
-hideFourm(3,7,'Food');
-hideFourm(1,4,'Creator');
+/* Hides the creators and food */
+hideFourm(Food,7,'Food');
+hideFourm(Creator,4,'Creator');
 
+/* Gives the add and remove button functions to the creator and food buttons */
 AddRemoveButtonFunction(1,5,Creator,'Creator');
 AddRemoveButtonFunction(1,10,Food,'Food');
 
+/* Gives functionality to the submit button to allow for validations, form sumbission and making the website*/
 document.getElementById('SubmitButton').onclick = function(){
   var errors = validateForms();
   if(errors.length ==0){
@@ -37,15 +41,19 @@ document.getElementById('SubmitButton').onclick = function(){
 
 
 
+
+
+/* Validates the form */
 function validateForms(){
 
+  /* Finds the number of the number of non hidden food and creator forms */
   var foodButtonNumber = new findNonHiddenButton('FoodAddSubtractButtonSet', 10).findNonHiddenButton();
-
   var creatorButtonNumber = new findNonHiddenButton('CreatorAddSubtractButtonSet', 5).findNonHiddenButton();
 
 
   var errorsReported = [];
 
+  /* Validates the Website Banner form */
   if(document.getElementById('WebsiteName').value == ''){
     errorsReported.push('WebsiteName must be more than one character');
   }
@@ -54,6 +62,10 @@ function validateForms(){
      errorsReported.push('Website Logo Url be a link or be left blank');
   }
 
+
+
+
+  /* Validates the Backgrounds form */
   if((document.getElementById('WebsiteBackground').value.length > 0) && !document.getElementById('WebsiteBackground').value.includes("https://") && !document.getElementById('WebsiteBackground').value.includes(".") ){
     errorsReported.push('Website Background Picture Url be a link or be left blank');
   }
@@ -65,6 +77,8 @@ function validateForms(){
 
 
 
+
+  /* Validates the Food forms */
   for(var i=1; i<=foodButtonNumber; i++){
     if(document.getElementById('Food'+i+'Input1').value == ''){
       errorsReported.push('Food Name in Food '+ i +' cannot be left blank');
@@ -92,6 +106,9 @@ function validateForms(){
 
   }
   
+
+
+  /* Validates the Creator forms */
   for(var i=1; i<=creatorButtonNumber; i++){
     
     if(document.getElementById('Creator'+i+'Input1').value == ''){
@@ -108,33 +125,39 @@ function validateForms(){
 
   }
 
-  return errorsReported;   
 
+  return errorsReported;   
 }
 
 
 
+/* Creates the Website made from the form inputs. This includes the HTML, CSS and JS */
 function createWebsite(){
 
+  /* Finds the number of the number of non hidden food and creator forms */
   var foodButtonNumber = new findNonHiddenButton('FoodAddSubtractButtonSet', 10).findNonHiddenButton();
-
   var creatorButtonNumber = new findNonHiddenButton('CreatorAddSubtractButtonSet', 5).findNonHiddenButton();
 
+  /* Gets the Website Name and Logo */
    var name = document.getElementById('WebsiteName').value;
    var logo = document.getElementById('WebsiteLogo').value;
 
-   var websiteBackground = document.getElementById('WebsiteBackground').value;
-   console.log(websiteBackground);
-   var pageBackground= document.getElementById('PageBackground').value;
-   console.log(pageBackground);
 
+   /* Gets the website backgrounds */
+   var websiteBackground = document.getElementById('WebsiteBackground').value;
+   var pageBackground= document.getElementById('PageBackground').value;
+
+
+   /*Downloads the HTML, CSS, and Javascript*/
    download('index.html', new OrderPage(foodButtonNumber, name, logo).CreateOrderPage());
    download('CreatorsPage.html', new CreatorsText(creatorButtonNumber, name, logo).CreateCreatorsPage());
    download('BakeSale.css', new CSStext(websiteBackground, pageBackground).CreateCss());
-   download('JadenJS.js', new JavascriptText(foodButtonNumber).CreateJavascript());
+   download('BakeSaleJS.js', new JavascriptText(foodButtonNumber).CreateJavascript());
 }
 
 
+
+/* Creates the Javascript Text */
 class JavascriptText{
 
   constructor(foodAmount){
@@ -150,10 +173,13 @@ class JavascriptText{
 
     var backgroundPics= [];
 
+    /* Gets the background URLs */
     for(var i=1; i<=this.foodAmount; i++){
       backgroundPics.push(new FoodInformation(i).getFoodInformation()[2]);
     }
 
+
+    /* Creates javascript to put the food background urls into the css/give them backgrounds */
     for(var i=0; i<backgroundPics.length; i++){
       var background = backgroundPics[i];
       
@@ -177,7 +203,7 @@ class JavascriptText{
 
 
 
-
+/* Creates the Order Page for the bake sale website */
 class OrderPage{
 
   constructor(foodAmount, name, logo){
@@ -187,10 +213,13 @@ class OrderPage{
   }
   
   CreateOrderPage(){
+
+    /* Makes the logo see through if there is not one*/
     if(this.logo==''){
       this.logo='rgb(0,0,0,0)';
     }
     
+    /*Creates the Page title, logo and nav bar*/
     var startOfPage=`
   <!DOCTYPE html>
   <html lang='en'>
@@ -223,7 +252,7 @@ class OrderPage{
               <div class='PageContent' role='main' aria-label='Bake Sale Website'>    
 
                   <nav class='NavBar' aria-label='Navagation Bar'>
-                      <a class='NavTab' href='index.html'>Make Website</a>
+                      <a class='NavTab' href='index.html'>Order Page</a>
                       <a class='NavTab2' href='CreatorsPage.html'>Creators</a>
                   </nav>
 
@@ -233,15 +262,18 @@ class OrderPage{
 
     var allFood=[];
     
+    /* Gets information from the Food form */
     for(var i=1; i<=this.foodAmount; i++){
       allFood.push(new FoodInformation(i).getFoodInformation());
     }
 
+    /* Uses form information to make food on the order page */
     for(var i=0; i<allFood.length; i++){
       startOfPage= startOfPage + this.CreateFoodHTML(i+1, allFood[i][0], allFood[i][1], allFood[i][3], allFood[i][4], allFood[i][5]);
     }
     
 
+    /*Creates the contact info, and submit button*/
   var restOfPage=`
 
                   <div class='FormType1' role='complementary' aria-label='Contact Information'>
@@ -268,7 +300,7 @@ class OrderPage{
 
               </div>
           </div>
-          <script src='JadenJS.js'></script>
+          <script src='BakeSaleJS.js'></script>
       </body>
 
   </html>
@@ -280,6 +312,7 @@ class OrderPage{
 
   CreateFoodHTML(foodNumber, FoodName, FoodPicUrl, DescriptionText, AllergyText, PricePerItem){
 
+    /* Creates the FoodHTML Page */
     var pageHTML=`
 
                   <div class='OrderItem' id='Food`+ foodNumber + `' role='complementary' aria-label='Food `+ foodNumber +` Information Form'>
@@ -354,10 +387,14 @@ class FoodInformation{
    }
 
    getFoodInformation(){
+    
     var foodInfo=[];
+
+    /*Gets the food information from the food form*/
     for(var i=1; i<=6; i++){
       foodInfo.push(document.getElementById('Food'+ this.foodNumber +'Input'+ i).value); 
     } 
+    
     return foodInfo;
   }
 
@@ -376,11 +413,13 @@ class CreatorsText{
   }
 
   CreateCreatorsPage(){
-    
+
+    /* Makes the logo see through if there is not one*/
     if(this.logo==''){
       this.logo='rgb(0,0,0,0)';
     }
 
+    /*Creates the Page title, logo and nav bar*/
     var startOfPage=`
 
   <!DOCTYPE html>
@@ -414,7 +453,7 @@ class CreatorsText{
               <div class='PageContent' role='main' aria-label='Bake Sale Website'>                    
 
                   <nav class='NavBar' aria-label='Navagation Bar'>
-                      <a class='NavTab' href='index.html'>Make Website</a>
+                      <a class='NavTab' href='index.html'>Order Page</a>
                       <a class='NavTab2' href='CreatorsPage.html'>Creators</a>
                   </nav>
 
@@ -431,16 +470,18 @@ class CreatorsText{
   `;
 
     var allCreators=[];
-    
+
+    /* Gets the creator information from the creator form */
     for(var i=1; i<= this.creatorAmount; i++){
       allCreators.push(new CreatorInformation(i).getCreatorInformation());
     }
 
+    /* Creates the creator html */
     for(var i=0; i<allCreators.length; i++){
       startOfPage = startOfPage + this.CreateCreatorHTML(i+1, allCreators[i][0], allCreators[i][1], allCreators[i][2]);
     }
-    
-
+  
+  /* Puts the rest of the html in to end the page*/
   var restOfPage=`
 
 
@@ -451,7 +492,7 @@ class CreatorsText{
 
               </div>
           </div>
-          <script src='JadenJS.js'></script>
+          <script src='BakeSaleJS.js'></script>
       </body>
 
   </html>
@@ -464,6 +505,8 @@ class CreatorsText{
 
 
   CreateCreatorHTML(num, name, source, description){
+
+    /*Creates the CSS card layout for the creator*/
     var creatorCard =`
                     <div class='Card'  role='complementary' aria-label='A Card Of Creator Number `+ num +` '>
                       
@@ -476,6 +519,7 @@ class CreatorsText{
                       </div>
                     </div>
     `
+    
     return creatorCard;
   }
 
@@ -486,7 +530,7 @@ class CreatorsText{
 
 
 
-
+/* Gets creator inormation from creator forms */
 class CreatorInformation{
    
    constructor(number){
@@ -497,6 +541,7 @@ class CreatorInformation{
     
     var creatorInfo=[];
 
+    /* Gets creator inormation from creator forms */
     for(var i=1; i<=3; i++){
       creatorInfo.push(document.getElementById('Creator'+this.number+'Input'+ i).value); 
     }
@@ -518,9 +563,11 @@ class CSStext{
   }
 
   CreateCss(){
+
     var websiteBackground= "url('"+ this.WebsiteBackground +"')";
     var pageBackground= "url('"+ this.PageBackground +"')";
 
+    /*Creates the CSS for the pages*/
     var css=`
   @media only screen and (max-width: 480px) {
     .logoImage{
@@ -1678,6 +1725,7 @@ class CSStext{
 
 }
 
+/*Hides the forms*/
 function hideFourm(StartFrom, NumberWantedHidden, VarName){
   for(var i=1; i<=NumberWantedHidden; i++){
     var k = i+StartFrom;
@@ -1688,11 +1736,11 @@ function hideFourm(StartFrom, NumberWantedHidden, VarName){
 
 
 
-
+/* Submits the forms */
 function SubmitForms(){
 
+  /* Finds the number of the number of non hidden food and creator forms */
   var foodButtonNumber = new findNonHiddenButton('FoodAddSubtractButtonSet', 10).findNonHiddenButton();
-
   var creatorButtonNumber = new findNonHiddenButton('CreatorAddSubtractButtonSet', 5).findNonHiddenButton();
 
   document.getElementById('form1').submit();
@@ -1711,7 +1759,7 @@ function SubmitForms(){
 }
 
 
-
+/* Adds the remove and add functions to each of the buttons */
 function AddRemoveButtonFunction(min, max, current, itemName){
   
   var addName= itemName + 'AddButton' + current;
@@ -1722,6 +1770,8 @@ function AddRemoveButtonFunction(min, max, current, itemName){
 
 }
 
+
+/* Adds the add function to the add button */
 function AddFuntion(min, max, current, itemName){
 
   if(current==max){
@@ -1752,6 +1802,7 @@ function AddFuntion(min, max, current, itemName){
 }
 
 
+/* Adds the remove function to the remove button */
 function RemoveFuntion(min, max, current, itemName){
 
   if(current==min){
@@ -1784,7 +1835,7 @@ function RemoveFuntion(min, max, current, itemName){
 
 
 
-
+/* Download function to download nearly any file type (in our case, CSS, HTML, and Javascript) */
 function download(filename, text) {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -1799,6 +1850,8 @@ function download(filename, text) {
 }
 
 
+
+/* Finds the only button that isn't hidden */
 class findNonHiddenButton{
   
   constructor(name, numberOf){
