@@ -1,4 +1,5 @@
 
+<!-- Phone Screen Css -->
 @media only screen and (max-width: 480px) {
   
   body{
@@ -383,7 +384,7 @@
 
 
 
-
+<!-- Tablet Screen Css -->
 @media only screen and (max-width: 872px) {
   body{
     height: auto;
@@ -777,7 +778,7 @@
 
 
 
-
+<!-- Website Screen Css -->
 @media only screen and (min-width: 873px) {
 
   body{

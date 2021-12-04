@@ -246,9 +246,11 @@ class OrderPage{
       <body>
 
           <div class='Background'>
-
-              <div class='HeadderBox' role='banner' aria-label='Page Title: Bake Sale Website' > <img src='`+ this.logo +`' class='logoImage'> <h1> `+ this.name +` </h1> <img src='`+ this.logo +`' class='logoImage'> </div>
               
+              <!-- Title -->
+              <div class='HeadderBox' role='banner' aria-label='Page Title: Bake Sale Website' > <img src='`+ this.logo +`' class='logoImage'> <h1> `+ this.name +` </h1> <img src='`+ this.logo +`' class='logoImage'> </div>
+
+              <!-- Nav Bar -->  
               <div class='PageContent' role='main' aria-label='Bake Sale Website'>    
 
                   <nav class='NavBar' aria-label='Navagation Bar'>
@@ -276,6 +278,7 @@ class OrderPage{
     /*Creates the contact info, and submit button*/
   var restOfPage=`
 
+                  <!-- Contact Form -->
                   <div class='FormType1' role='complementary' aria-label='Contact Information'>
 
                           <h3>Contact Info</h3>
@@ -292,6 +295,7 @@ class OrderPage{
                   </div>
 
 
+                  <!-- Submission Button -->
                   <div class='SubmitBox' role='complementary' aria-label='Submission Button'>
                       <button class='SubmitButton' id='SubmitButton'>Submit</button>
                   </div>
@@ -314,7 +318,8 @@ class OrderPage{
 
     /* Creates the FoodHTML Page */
     var pageHTML=`
-
+                  
+                  <!-- Form For Item `+ foodNumber +` -->
                   <div class='OrderItem' id='Food`+ foodNumber + `' role='complementary' aria-label='Food `+ foodNumber +` Information Form'>
                       
                       
@@ -448,8 +453,10 @@ class CreatorsText{
 
           <div class='Background'>
 
+             <!-- Title -->
              <div class='HeadderBox' role='banner' aria-label='Page Title: Bake Sale Website Maker'> <img src='`+ this.logo +`' class='logoImage'> <h1> `+ this.name +` </h1> <img src='`+ this.logo +`' class='logoImage'> </div>
 
+             <!-- Nav Bar -->
               <div class='PageContent' role='main' aria-label='Bake Sale Website'>                    
 
                   <nav class='NavBar' aria-label='Navagation Bar'>
@@ -459,6 +466,8 @@ class CreatorsText{
 
 
 
+
+                <!-- Subtitle -->
                 <div class='SubTitle3' role='complementary' aria-label='Please Put In The Information'>
 
                       <h2>Creators Of This Website</h2>
@@ -508,6 +517,7 @@ class CreatorsText{
 
     /*Creates the CSS card layout for the creator*/
     var creatorCard =`
+                    <!-- Card Layout For Person `+ num +` -->
                     <div class='Card'  role='complementary' aria-label='A Card Of Creator Number `+ num +` '>
                       
                       <img src='`+ source +`'  alt='A Picture Creator Number `+ num +` ' aria-label='A Picture Creator Number `+ num +` ' class='CardImage'>
@@ -569,6 +579,7 @@ class CSStext{
 
     /*Creates the CSS for the pages*/
     var css=`
+  <!-- Phone Screen Css -->
   @media only screen and (max-width: 480px) {
     .logoImage{
       width: 10vh;
@@ -959,6 +970,7 @@ class CSStext{
   }
 
 
+  <!-- Tablet Screen Css -->
   @media only screen and (max-width: 872px) {
 
     .logoImage{
@@ -1346,6 +1358,7 @@ class CSStext{
   }
 
 
+  <!-- Website Screen Css -->
   @media only screen and (min-width: 873px) {
     
     .logoImage{
