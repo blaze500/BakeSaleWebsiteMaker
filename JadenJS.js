@@ -355,7 +355,7 @@ class OrderPage{
                               <div class='FoodDescriptionBox2'>
 
                                   <p>Price Per Item: `+ PricePerItem +`$</p>
-                                  <label for='DropDownForm'>Quantity Wanted:</label>
+                                  <p>Quantity Wanted:</p>
                                   <form class='DropDownForm' id='DropDownForm'>
                                   <select name='NumberDropDown' aria-label='DropDown For Prices `+ foodNumber +`' id='DropDown`+ foodNumber +`' class='NumberDropDown'>
                                   <option value='0'>0</option>
@@ -458,7 +458,7 @@ class CreatorsText{
           <div class='Background'>
 
              <!-- Title -->
-             <div class='HeadderBox' role='banner' aria-label='Page Title: Bake Sale Website Maker'> <img src='`+ this.logo +`' class='logoImage'> <h1> `+ this.name +` </h1> <img src='`+ this.logo +`' class='logoImage'> </div>
+             <div class='HeadderBox' role='banner' aria-label='Page Title: Bake Sale Website Maker'> <img src='`+ this.logo +`' class='logoImage' alt='The logo left of the title' class='logoImage' aria-label='Left Logo'> <h1> `+ this.name +` </h1> <img src='`+ this.logo +`' class='logoImage' alt='The logo right of the title'> </div>
 
              <!-- Nav Bar -->
               <div class='PageContent' role='main' aria-label='Bake Sale Website'>                    
