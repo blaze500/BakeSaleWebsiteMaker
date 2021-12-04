@@ -251,7 +251,7 @@ class OrderPage{
           <div class='Background'>
               
               <!-- Title -->
-              <div class='HeadderBox' role='banner' aria-label='Page Title: Bake Sale Website' > <img src='`+ this.logo +`' class='logoImage' aria-label='Left Logo'> <h1> `+ this.name +` </h1> <img src='`+ this.logo +`' class='logoImage' aria-label='Right Logo'> </div>
+              <div class='HeadderBox' role='banner' aria-label='Page Title: Bake Sale Website' > <img src='`+ this.logo +`' alt='The logo left of the title' class='logoImage' aria-label='Left Logo'> <h1> `+ this.name +` </h1> <img src='`+ this.logo +`' class='logoImage' alt='The logo right of the title' aria-label='Right Logo'> </div>
 
               <!-- Nav Bar -->  
               <div class='PageContent' role='main' aria-label='Bake Sale Website'>    
@@ -287,11 +287,11 @@ class OrderPage{
                           <h3>Contact Info</h3>
 
                           <form class='InputFeild2' id='form3'>
-                                <input class='ThirdInput' type='text' placeholder='Name' id='Food1Input1'>
+                                <input class='ThirdInput' type='text' placeholder='Name' id='Contact1Input1'>
 
-                                <input class='ThirdInput' type='url' placeholder='Email' id=''>
+                                <input class='ThirdInput' type='url' placeholder='Email' id='Contact2Input1'>
 
-                                <input class='ThirdInput' type='url' placeholder='Phone Number (optional)' id=''>
+                                <input class='ThirdInput' type='url' placeholder='Phone Number (optional)' id='Contact3Input1'>
 
                           </form>
 
@@ -355,8 +355,8 @@ class OrderPage{
                               <div class='FoodDescriptionBox2'>
 
                                   <p>Price Per Item: `+ PricePerItem +`$</p>
-                                  <label for="cars">Quantity Wanted:</label>
-                                  <form class='DropDownForm'>
+                                  <label for='DropDownForm'>Quantity Wanted:</label>
+                                  <form class='DropDownForm' id='DropDownForm'>
                                   <select name='NumberDropDown' aria-label='DropDown For Prices `+ foodNumber +`' id='DropDown`+ foodNumber +`' class='NumberDropDown'>
                                   <option value='0'>0</option>
                                   <option value='1'>1</option>
