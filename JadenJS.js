@@ -579,7 +579,7 @@ class CSStext{
 
     /*Creates the CSS for the pages*/
     var css=`
-  <!-- Phone Screen Css -->
+  /* Phone Screen Css */
   @media only screen and (max-width: 480px) {
     .logoImage{
       width: 10vh;
@@ -970,7 +970,7 @@ class CSStext{
   }
 
 
-  <!-- Tablet Screen Css -->
+  /* Tablet Screen Css */
   @media only screen and (max-width: 872px) {
 
     .logoImage{
@@ -1358,7 +1358,7 @@ class CSStext{
   }
 
 
-  <!-- Website Screen Css -->
+  */ Website Screen Css */
   @media only screen and (min-width: 873px) {
     
     .logoImage{
