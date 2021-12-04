@@ -186,11 +186,14 @@ class JavascriptText{
       if((background == '') || (background == undefined)){
         background='rgb(0,0,0,0)';
       }
+      else{
+        background = '"url('+ background +')"';
+      }
 
       var num=i+1;
 
       javascript += `
-    document.getElementById('Food`+ num +`').style.background = "url('`+ background +`')";
+    document.getElementById('Food`+ num +`').style.background = `+ background +`;
 
     `;
 
