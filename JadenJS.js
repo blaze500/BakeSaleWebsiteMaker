@@ -581,11 +581,11 @@ class CSStext{
     var pageBackground= "url('"+ this.PageBackground +"')";
 
     if(this.WebsiteBackground == ''){
-      websiteBackground='"white"';
+      websiteBackground='white';
     }
     
     if(this.PageBackground == ''){
-      pageBackground='"white"';
+      pageBackground='white';
     }
 
     /*Creates the CSS for the pages*/
