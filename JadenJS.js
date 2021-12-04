@@ -184,7 +184,7 @@ class JavascriptText{
       var background = backgroundPics[i];
       
       if((background == '') || (background == undefined)){
-        background='solid white';
+        background='white';
       }
       else{
         background = '"url('+ background +')"';
@@ -580,11 +580,11 @@ class CSStext{
     var pageBackground= "url('"+ this.PageBackground +"')";
 
     if(this.WebsiteBackground == ''){
-      websiteBackground='solid white';
+      websiteBackground='white';
     }
     
     if(this.PageBackground == ''){
-      pageBackground='solid white';
+      pageBackground='white';
     }
 
     /*Creates the CSS for the pages*/
