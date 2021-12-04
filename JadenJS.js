@@ -55,7 +55,7 @@ function validateForms(){
 
   /* Validates the Website Banner form */
   if(document.getElementById('WebsiteName').value == ''){
-    errorsReported.push('WebsiteName must be more than one character');
+    errorsReported.push('Website Name must be more than one character');
   }
 
   if((document.getElementById('WebsiteLogo').value.length > 0) && !document.getElementById('WebsiteLogo').value.includes("https://") && !document.getElementById('WebsiteLogo').value.includes(".") ){
