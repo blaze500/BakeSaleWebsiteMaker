@@ -16,6 +16,7 @@ AddRemoveButtonFunction(1,10,Food,'Food');
 /* Gives functionality to the submit button to allow for validations, form sumbission and making the website*/
 document.getElementById('SubmitButton').onclick = function(){
   var errors = validateForms();
+  var errors = [];
   if(errors.length ==0){
     SubmitForms(); 
     createWebsite(); 
@@ -167,7 +168,7 @@ class JavascriptText{
   CreateJavascript(){
     var javascript=`
 
-    document.getElementById('SubmitButton').onclick = function(){window.alert('Order Made!');};
+    document.getElementById('SubmitButton').onclick = function(){window.alert('Order Made! (Not Really, as there is not Backend to this site)');};
 
     `;
 
@@ -355,6 +356,7 @@ class OrderPage{
                               <div class='FoodDescriptionBox2'>
 
                                   <p>Price Per Item: `+ PricePerItem +`$</p>
+                                  <label for="cars">Quantity Wanted:</label>
                                   <form class='DropDownForm'>
                                   <select name='NumberDropDown' aria-label='DropDown For Prices `+ foodNumber +`' id='DropDown`+ foodNumber +`' class='NumberDropDown'>
                                   <option value='0'>0</option>
