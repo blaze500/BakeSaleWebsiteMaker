@@ -219,7 +219,7 @@ class OrderPage{
 
     /* Makes the logo see through if there is not one*/
     if(this.logo==''){
-      this.logo='solid white';
+      this.logo='https://www.macmillandictionary.com/external/slideshow/full/White_full.png';
     }
     
     /*Creates the Page title, logo and nav bar*/
@@ -424,7 +424,7 @@ class CreatorsText{
 
     /* Makes the logo see through if there is not one*/
     if(this.logo==''){
-      this.logo='solid white';
+      this.logo='https://www.macmillandictionary.com/external/slideshow/full/White_full.png';
     }
 
     /*Creates the Page title, logo and nav bar*/
@@ -578,6 +578,14 @@ class CSStext{
 
     var websiteBackground= "url('"+ this.WebsiteBackground +"')";
     var pageBackground= "url('"+ this.PageBackground +"')";
+
+    if(this.WebsiteBackground == ''){
+      websiteBackground='solid white';
+    }
+    
+    if(this.PageBackground == ''){
+      pageBackground='solid white';
+    }
 
     /*Creates the CSS for the pages*/
     var css=`
