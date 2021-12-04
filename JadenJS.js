@@ -184,7 +184,7 @@ class JavascriptText{
       var background = backgroundPics[i];
       
       if((background == '') || (background == undefined)){
-        background='rgb(0,0,0,0)';
+        background='solid white';
       }
       else{
         background = '"url('+ background +')"';
@@ -219,7 +219,7 @@ class OrderPage{
 
     /* Makes the logo see through if there is not one*/
     if(this.logo==''){
-      this.logo='rgb(0,0,0,0)';
+      this.logo='solid white';
     }
     
     /*Creates the Page title, logo and nav bar*/
@@ -424,7 +424,7 @@ class CreatorsText{
 
     /* Makes the logo see through if there is not one*/
     if(this.logo==''){
-      this.logo='rgb(0,0,0,0)';
+      this.logo='solid white';
     }
 
     /*Creates the Page title, logo and nav bar*/
@@ -504,7 +504,6 @@ class CreatorsText{
 
               </div>
           </div>
-          <script src='BakeSaleJS.js'></script>
       </body>
 
   </html>
@@ -1361,7 +1360,7 @@ class CSStext{
   }
 
 
-  */ Website Screen Css */
+  /* Website Screen Css */
   @media only screen and (min-width: 873px) {
     
     .logoImage{
