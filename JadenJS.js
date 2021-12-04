@@ -184,7 +184,7 @@ class JavascriptText{
       var background = backgroundPics[i];
       
       if((background == '') || (background == undefined)){
-        background='white';
+        background='"white"';
       }
       else{
         background = '"url('+ background +')"';
@@ -251,7 +251,7 @@ class OrderPage{
           <div class='Background'>
               
               <!-- Title -->
-              <div class='HeadderBox' role='banner' aria-label='Page Title: Bake Sale Website' > <img src='`+ this.logo +`' class='logoImage'> <h1> `+ this.name +` </h1> <img src='`+ this.logo +`' class='logoImage'> </div>
+              <div class='HeadderBox' role='banner' aria-label='Page Title: Bake Sale Website' > <img src='`+ this.logo +`' class='logoImage' aria-label='Left Logo'> <h1> `+ this.name +` </h1> <img src='`+ this.logo +`' class='logoImage' aria-label='Right Logo'> </div>
 
               <!-- Nav Bar -->  
               <div class='PageContent' role='main' aria-label='Bake Sale Website'>    
@@ -581,11 +581,11 @@ class CSStext{
     var pageBackground= "url('"+ this.PageBackground +"')";
 
     if(this.WebsiteBackground == ''){
-      websiteBackground='white';
+      websiteBackground='"white"';
     }
     
     if(this.PageBackground == ''){
-      pageBackground='white';
+      pageBackground='"white"';
     }
 
     /*Creates the CSS for the pages*/
