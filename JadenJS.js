@@ -16,7 +16,6 @@ AddRemoveButtonFunction(1,10,Food,'Food');
 /* Gives functionality to the submit button to allow for validations, form sumbission and making the website*/
 document.getElementById('SubmitButton').onclick = function(){
   var errors = validateForms();
-  var errors = [];
   if(errors.length ==0){
     SubmitForms(); 
     createWebsite(); 
