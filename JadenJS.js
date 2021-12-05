@@ -600,6 +600,7 @@ class CSStext{
     body{
       height: auto;
       width: 99%;
+      background: `+ websiteBackground +`; 
     }
 
     .FoodPic{
@@ -705,8 +706,7 @@ class CSStext{
       margin-bottom: 2%;
     }
 
-    .Background{
-      background: `+ websiteBackground +`;    
+    .Background{   
       justify-content: flex-start;
       align-items: center;
       flex-wrap: nowrap;
@@ -992,6 +992,7 @@ class CSStext{
     body{
       height: auto;
       width: 99%;
+      background: `+ websiteBackground +`;
     }
 
     .FoodPic{
@@ -1099,7 +1100,6 @@ class CSStext{
     }
 
     .Background{
-      background: `+ websiteBackground +`;
       justify-content: flex-start;
       align-items: center;
       flex-wrap: nowrap;
@@ -1380,6 +1380,7 @@ class CSStext{
     body{
       height: auto;
       width: 99%;
+      background: `+ websiteBackground +`;
     }
 
     .FoodPic{
@@ -1486,7 +1487,6 @@ class CSStext{
     }
 
     .Background{
-      background: `+ websiteBackground +`;
       justify-content: flex-start;
       align-items: center;
       flex-wrap: nowrap;
